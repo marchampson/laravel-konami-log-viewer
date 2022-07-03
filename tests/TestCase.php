@@ -3,8 +3,9 @@
 namespace Marchampson\LaravelKonamiLogViewer\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
+use Illuminate\Support\Facades\Route;
 use Marchampson\LaravelKonamiLogViewer\LaravelKonamiLogViewerServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
@@ -15,6 +16,8 @@ class TestCase extends Orchestra
         Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'Marchampson\\LaravelKonamiLogViewer\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
+
+        Route::konamiLogViewer();
     }
 
     protected function getPackageProviders($app)

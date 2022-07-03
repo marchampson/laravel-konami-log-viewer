@@ -2,6 +2,8 @@
 
 namespace Marchampson\LaravelKonamiLogViewer;
 
+use Illuminate\Support\Facades\Route;
+use Marchampson\LaravelKonamiLogViewer\Http\Controllers\LogViewerController;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Marchampson\LaravelKonamiLogViewer\Commands\LaravelKonamiLogViewerCommand;
@@ -21,5 +23,14 @@ class LaravelKonamiLogViewerServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasMigration('create_laravel-konami-log-viewer_table')
             ->hasCommand(LaravelKonamiLogViewerCommand::class);
+    }
+
+    public function packageRegistered()
+    {
+        Route::macro('konamiLogViewer', function (string $baseUrl = 'konami-log-viewer') {
+            Route::prefix($baseUrl)->group(function () {
+                Route::match(['GET', 'POST'], '/', [LogViewerController::class, 'index']);
+            });
+        });
     }
 }
