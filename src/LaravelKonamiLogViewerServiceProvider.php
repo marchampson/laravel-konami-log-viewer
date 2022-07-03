@@ -2,9 +2,9 @@
 
 namespace Marchampson\LaravelKonamiLogViewer;
 
+use Marchampson\LaravelKonamiLogViewer\Commands\LaravelKonamiLogViewerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Marchampson\LaravelKonamiLogViewer\Commands\LaravelKonamiLogViewerCommand;
 
 class LaravelKonamiLogViewerServiceProvider extends PackageServiceProvider
 {
