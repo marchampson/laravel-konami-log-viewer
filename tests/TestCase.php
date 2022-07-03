@@ -16,8 +16,6 @@ class TestCase extends Orchestra
         Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'Marchampson\\LaravelKonamiLogViewer\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
-
-        Route::konamiLogViewer();
     }
 
     protected function getPackageProviders($app)
