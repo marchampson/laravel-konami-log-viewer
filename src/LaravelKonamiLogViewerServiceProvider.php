@@ -2,11 +2,14 @@
 
 namespace Marchampson\LaravelKonamiLogViewer;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Route;
 use Marchampson\LaravelKonamiLogViewer\Http\Controllers\LogViewerController;
+=======
+use Marchampson\LaravelKonamiLogViewer\Commands\LaravelKonamiLogViewerCommand;
+>>>>>>> 6161990517e9395328c3d058a9797dd08a7d87fa
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Marchampson\LaravelKonamiLogViewer\Commands\LaravelKonamiLogViewerCommand;
 
 class LaravelKonamiLogViewerServiceProvider extends PackageServiceProvider
 {
