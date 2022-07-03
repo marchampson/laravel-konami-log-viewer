@@ -3,7 +3,6 @@
 namespace Marchampson\LaravelKonamiLogViewer\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Facades\Route;
 use Marchampson\LaravelKonamiLogViewer\LaravelKonamiLogViewerServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
