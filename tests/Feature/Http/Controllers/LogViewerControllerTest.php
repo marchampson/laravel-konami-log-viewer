@@ -2,7 +2,7 @@
 
 use Marchampson\LaravelKonamiLogViewer\Http\Controllers\LogViewerController;
 
-it('has a log file to view', function() {
+it('has a log file to view', function () {
     $this->assertFileExists(storage_path('logs/laravel.log'));
 });
 
