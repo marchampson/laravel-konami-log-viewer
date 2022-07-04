@@ -6,5 +6,5 @@ it('has a route to the log viewer', function () {
     $this
        ->get(action([LogViewerController::class, 'index']))
        ->assertOk()
-       ->assertSee('Log Viewer');
+       ->assertSee('laravel.log');
 });

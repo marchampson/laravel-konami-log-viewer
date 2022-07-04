@@ -19,18 +19,14 @@ class LaravelKonamiLogViewerServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-konami-log-viewer')
-            ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_laravel-konami-log-viewer_table')
-            ->hasCommand(LaravelKonamiLogViewerCommand::class);
+            ->hasAssets();
     }
 
     public function packageRegistered()
     {
-        Route::macro('konamiLogViewer', function (string $baseUrl = 'konami-log-viewer') {
-            Route::prefix($baseUrl)->group(function () {
-                Route::match(['GET', 'POST'], '/', [LogViewerController::class, 'index']);
-            });
+        Route::macro('konamiLogViewer', function () {
+            Route::match(['GET', 'POST'], '/konami-log-viewer', [LogViewerController::class, 'index']);
         });
     }
 }
