@@ -24,7 +24,7 @@
             <textarea
                 class="form-control mt-2"
                 style="height: 90vh"
-                id="logsOutput">{{ $selectedFile }}
+                id="logsOutput">{{ File::get(storage_path('logs/'.$selectedFile)) }}
             </textarea>
         </form>
     </div>
