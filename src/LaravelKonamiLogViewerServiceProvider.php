@@ -3,7 +3,6 @@
 namespace Marchampson\LaravelKonamiLogViewer;
 
 use Illuminate\Support\Facades\Route;
-use Marchampson\LaravelKonamiLogViewer\Commands\LaravelKonamiLogViewerCommand;
 use Marchampson\LaravelKonamiLogViewer\Http\Controllers\LogViewerController;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
