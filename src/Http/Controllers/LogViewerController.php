@@ -10,9 +10,11 @@ class LogViewerController
     {
         $key_combination = config('konami-log-viewer.launch_key_combination');
         $selectedFile = $request->get('file') ?: 'laravel.log';
-        $files = array_reverse(glob(storage_path('logs/*.log')));
+        $files = (is_dir(storage_path())) ? array_reverse(glob(storage_path('logs/*.log'))) : [];
 
-        return view('konami-log-viewer::log-viewer',
-            compact('selectedFile', 'files', 'key_combination'));
+        return view(
+            'konami-log-viewer::log-viewer',
+            compact('selectedFile', 'files', 'key_combination')
+        );
     }
 }
