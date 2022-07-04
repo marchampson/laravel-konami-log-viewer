@@ -1,8 +1,8 @@
 <?php
 
+use Illuminate\Http\Testing\File;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\Testing\File;
 use Marchampson\LaravelKonamiLogViewer\Tests\TestCase;
 
 uses(TestCase::class)
