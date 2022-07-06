@@ -32,6 +32,7 @@ Once the assets are published (above). Call the JS file in your main layout file
 ```javascript
 <script src="{{ asset('vendor/konami-log-viewer/js/konami-log-viewer.js')}}"></script>
 ```
+Please remember that view-source will expose the key combination so that anyone will be able to view your logs. Future releases may address this but you could wrap the javascript call in a blade helper that only shows to users with a certain role.
 
 ## Testing
 
